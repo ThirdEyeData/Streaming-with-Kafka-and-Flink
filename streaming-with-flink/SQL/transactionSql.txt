@@ -1,0 +1,6 @@
+SELECT sum(amount) as total,account_no,DATE_FORMAT(date, '%Y') 
+FROM project.transaction 
+group by DATE_FORMAT(date, '%Y'),account_no
+having total>1000000000;
+ ;
+
